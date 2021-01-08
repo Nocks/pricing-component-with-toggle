@@ -1,0 +1,59 @@
+ // Primary colours
+$linear-gradient-blue: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+// Neutral colours
+$color-very-light-grayish-blue: hsl(240, 78%, 98%);
+$color-light-grayish-blue: hsl(234, 14%, 74%);
+$color-grayish-blue: hsl(233, 13%, 49%);
+$color-dark-grayish-blue: hsl(232, 13%, 33%);
+
+// Typography
+$default-font: 'Montserrat', sans-serif;
+
+// Body copy
+$body-font-size: 0.9375em; // 15px
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $default-font;
+  font-size: $body-font-size;
+  line-height: 1.5em;
+}
+
+body * + * {
+  margin-top: 1.5em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $default-font;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  border: none;
+}
+
+a:active, a:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
