@@ -6,45 +6,57 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <title>Frontend Mentor | Pricing component with toggle</title>
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-  Our Pricing
-  Annually
-  Monthly
-
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
-
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
-
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container">
+    <div class="header">
+      <h2>Our Pricing</h2>
+      <div class="payment-option">
+        <p>Annually</p>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider round"></span>
+        </label>
+        <p>Monthly</p>
+      </div>
+    </div>
+    <div class="pricing-component-wrapper">
+      <div class="pricing-component">
+        <h4 class="pricing-component__type">Basic</h4>
+        <h1 class="pricing-component__price">&dollar;19.99</h1>
+        <p class="pricing-component__feature-item basic">500 GB Storage</p>
+        <p class="pricing-component__feature-item basic">2 Users Allowed</p>
+        <p class="pricing-component__feature-item basic">Send up to 3 GB</p>
+        <button class="pricing-component__btn btn-basic" type="button">Learn More</button>
+      </div>
+      <div class="pricing-component">
+        <h4 class="pricing-component__type">Professional</h4>
+        <h1 class="pricing-component__price">&dollar;24.99</h1>
+        <p class="pricing-component__feature-item basic">1 TB Storage</p>
+        <p class="pricing-component__feature-item basic">5 Users Allowed</p>
+        <p class="pricing-component__feature-item basic">Send up to 10 GB</p>
+        <button class="pricing-component__btn btn-basic" type="button">Learn More</button>
+      </div>
+      <div class="pricing-component">
+        <h4 class="pricing-component__type">Master</h4>
+        <h1 class="pricing-component__price">&dollar;39.99</h1>
+        <p class="pricing-component__feature-item basic">2 TB Storage</p>
+        <p class="pricing-component__feature-item basic">10 Users Allowed</p>
+        <p class="pricing-component__feature-item basic">Send up to 20 GB</p>
+        <button class="pricing-component__btn btn-basic" type="button">Learn More</button>
+      </div>
+    </div>
   </div>
+  <footer>
+    <div class="attribution">
+      <span>Challenge by <a href="https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC" target="_blank">Frontend Mentor</a>.</span>
+      <span>Coded by <a href="http://enockaddey.com/">Enock Kwesi Addey</a> &copy; 2021.</span>
+    </div>
+  </footer>
 </body>
 </html>
