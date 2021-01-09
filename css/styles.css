@@ -61,13 +61,19 @@ input:focus {
 
 .heading {
   text-align: center;
-  font-size: 2.3em;
-  color: #494c5f;
+  font-size: 2.5em;
+  color: #6d708d;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .payment-option {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  padding-left: 1.3em;
+  padding-right: 1.3em;
+  /* Rounded sliders */
 }
 .payment-option__label {
   margin-top: 0;
@@ -76,6 +82,55 @@ input:focus {
 }
 .payment-option__switch {
   margin-top: 0;
+}
+.payment-option__switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.payment-option__switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.payment-option .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  margin-top: 0;
+}
+.payment-option .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.payment-option input + .slider,
+.payment-option input:checked + .slider {
+  background: linear-gradient(#a3a8f0, #696fdd);
+}
+.payment-option input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.payment-option .slider.round {
+  border-radius: 34px;
+}
+.payment-option .slider.round:before {
+  border-radius: 50%;
 }
 
 .pricing-component-wrapper {
@@ -158,9 +213,19 @@ input:focus {
   background: linear-gradient(#a3a8f0, #696fdd);
   color: white;
 }
+.pricing-component__btn.btn-basic:hover, .pricing-component__btn.btn-basic:focus, .pricing-component__btn.btn-basic:active, .pricing-component__btn.btn-master:hover, .pricing-component__btn.btn-master:focus, .pricing-component__btn.btn-master:active {
+  background: white;
+  color: #696fdd;
+  border: 1px solid #494c5f;
+}
 .pricing-component__btn.btn-professional {
   background: white;
   color: #696fdd;
+}
+.pricing-component__btn.btn-professional:hover, .pricing-component__btn.btn-professional:focus, .pricing-component__btn.btn-professional:active {
+  background: #696fdd;
+  color: white;
+  border: 1px solid white;
 }
 .pricing-component--basic {
   background-color: white;
@@ -171,6 +236,29 @@ input:focus {
 }
 .pricing-component--master {
   background-color: white;
+  margin-bottom: 0;
+}
+
+footer .attribution {
+  font-size: 0.6875em;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.8em;
+  color: #494c5f;
+}
+footer .attribution a {
+  color: #494c5f;
+}
+footer .attribution a:hover,
+footer .attribution a:focus,
+footer .attribution a:active {
+  color: #a3a8f0;
+}
+footer .attribution span {
+  display: block;
+}
+footer .attribution span + span {
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

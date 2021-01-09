@@ -76,13 +76,18 @@ input:focus {
 
 .heading {
   text-align: center;
-  font-size: 2.3em;
-  color: $color-dark-grayish-blue;
+  font-size: 2.5em;
+  color: $color-grayish-blue;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .payment-option {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  padding-left: 1.3em;
+  padding-right: 1.3em;
 
   &__label {
     margin-top: 0;
@@ -91,6 +96,63 @@ input:focus {
   }
   &__switch {
     margin-top: 0;
+  }
+  &__switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  &__switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    margin-top: 0;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input + .slider,
+  input:checked + .slider {
+    background: $linear-gradient-blue;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
   }
 }
 
@@ -178,9 +240,26 @@ input:focus {
     background: $linear-gradient-blue;
     color: white;
   }
+  &__btn.btn-basic:hover,
+  &__btn.btn-basic:focus,
+  &__btn.btn-basic:active,
+  &__btn.btn-master:hover,
+  &__btn.btn-master:focus,
+  &__btn.btn-master:active {
+    background: white;
+    color: hsl(237, 63%, 64%);
+    border: 1px solid $color-dark-grayish-blue;
+  }
   &__btn.btn-professional{
     background: white;
     color: hsl(237, 63%, 64%);
+  }
+  &__btn.btn-professional:hover,
+  &__btn.btn-professional:focus,
+  &__btn.btn-professional:active{
+    background: hsl(237, 63%, 64%);
+    color: white;
+    border: 1px solid white;
   }
   &--basic {
     background-color: white;
@@ -191,5 +270,33 @@ input:focus {
   }
   &--master {
     background-color: white;
+    margin-bottom: 0;
+  }
+}
+
+footer {
+  .attribution {
+    font-size: 0.6875em; // 11px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0.8em;
+    color: $color-dark-grayish-blue;
+  }
+  .attribution a {
+    color: $color-dark-grayish-blue;
+  }
+
+  .attribution a:hover,
+  .attribution a:focus,
+  .attribution a:active {
+    color: hsl(236, 72%, 79%);
+  }
+
+  .attribution span {
+     display: block;
+  }
+
+  .attribution span + span {
+     margin-top: 0;
   }
 }
