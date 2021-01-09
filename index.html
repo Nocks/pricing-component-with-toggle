@@ -19,7 +19,7 @@
       <div class="payment-option">
         <p class="payment-option__label">Annually</p>
         <label class="payment-option__switch">
-          <input type="checkbox" checked>
+          <input type="checkbox" checked id="payment-option">
           <span class="slider round"></span>
         </label>
         <p class="payment-option__label">Monthly</p>
@@ -30,7 +30,7 @@
         <h4 class="pricing-component__type basic">Basic</h4>
         <div class="pricing-component__price-wrapper basic">
           <span class="pricing-component__currency basic">&dollar;</span>
-          <span class="pricing-component__amount basic">19.99</span>
+          <span class="pricing-component__amount basic" id="basic-cost">19.99</span>
         </div>
         <div class="pricing-component__feature-wrapper basic">
           <p class="pricing-component__feature-item basic">500 GB Storage</p>
@@ -47,7 +47,7 @@
         <h4 class="pricing-component__type professional">Professional</h4>
         <div class="pricing-component__price-wrapper professional">
           <span class="pricing-component__currency professional">&dollar;</span>
-          <span class="pricing-component__amount professional">24.99</span>
+          <span class="pricing-component__amount professional" id="professional-cost">24.99</span>
         </div>
         <div class="pricing-component__feature-wrapper professional">
           <p class="pricing-component__feature-item professional">1 TB Storage</p>
@@ -64,7 +64,7 @@
         <h4 class="pricing-component__type master">Master</h4>
         <div class="pricing-component__price-wrapper master">
           <span class="pricing-component__currency master">&dollar;</span>
-          <span class="pricing-component__amount master">39.99</span>
+          <span class="pricing-component__amount master" id="master-cost">39.99</span>
         </div>
         <div class="pricing-component__feature-wrapper master">
           <p class="pricing-component__feature-item master">2 TB Storage</p>
@@ -85,5 +85,6 @@
       <span>Coded by <a href="http://enockaddey.com/">Enock Kwesi Addey</a> &copy; 2021.</span>
     </div>
   </footer>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
