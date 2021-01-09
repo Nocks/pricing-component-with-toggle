@@ -137,7 +137,13 @@ input:focus {
 
   input + .slider,
   input:checked + .slider {
-    background: $linear-gradient-blue;
+    background: hsl(237, 63%, 64%);
+  }
+
+  input + .slider:hover,
+  input + .slider:focus,
+  input + .slider:active {
+    background: hsl(236, 72%, 79%);
   }
 
   input:checked + .slider:before {
@@ -272,6 +278,9 @@ input:focus {
     background-color: white;
     margin-bottom: 0;
   }
+  -webkit-box-shadow: 0px 7px 18px -10px rgba(179,181,198,1);
+  -moz-box-shadow: 0px 7px 18px -10px rgba(179,181,198,1);
+  box-shadow: 0px 7px 18px -10px rgba(179,181,198,1);
 }
 
 footer {
