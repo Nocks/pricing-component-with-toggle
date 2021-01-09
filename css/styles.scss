@@ -30,6 +30,7 @@ body {
   font-family: $default-font;
   font-size: $body-font-size;
   line-height: 1.5em;
+  background-color: $color-very-light-grayish-blue;
 }
 
 body * + * {
@@ -56,4 +57,139 @@ a:active, a:focus {
 button:focus,
 input:focus {
   outline: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 1rem;
+  width: 85%;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.3em;
+  color: $color-dark-grayish-blue;
+}
+
+.payment-option {
+  display: flex;
+  justify-content: space-around;
+
+  &__label {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $color-light-grayish-blue;
+  }
+  &__switch {
+    margin-top: 0;
+  }
+}
+
+.pricing-component-wrapper {
+  width: 85%;
+  padding: 1rem 2rem;
+}
+
+.pricing-component {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-bottom: 2em;
+  margin-bottom: 3em;
+
+  &__type {
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
+  &__type.basic,
+  &__type.master {
+    color: $color-grayish-blue;
+  }
+  &__price-wrapper {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3.5em;
+    width: 100%;
+  }
+  &__price-wrapper.basic,
+  &__price-wrapper.master{
+    border-bottom: 1px solid $color-light-grayish-blue;
+    color: $color-dark-grayish-blue;
+  }
+  &__price-wrapper.professional {
+    border-bottom: 1px solid white;
+  }
+  &__currency {
+    display: inline-block;
+    font-size: 2.2em;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+  &__amount {
+    display: inline-block;
+    margin-top: 0;
+    font-size: 3.5em;
+  }
+  &__feature-wrapper {
+    width: 100%;
+    margin-top: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    color: $color-grayish-blue;
+    font-weight: 700;
+  }
+  &__feature-wrapper.professional {
+    border-bottom: 1px solid white;
+    color: white;
+  }
+  &__feature-wrapper.basic,
+  &__feature-wrapper.master {
+    border-bottom: 1px solid $color-light-grayish-blue;
+  }
+  &__btn {
+    width: 90%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 3em;
+  }
+  &__btn.btn-basic,
+  &__btn.btn-master {
+    background: $linear-gradient-blue;
+    color: white;
+  }
+  &__btn.btn-professional{
+    background: white;
+    color: hsl(237, 63%, 64%);
+  }
+  &--basic {
+    background-color: white;
+  }
+  &--professional {
+    background: $linear-gradient-blue;
+    color: white;
+  }
+  &--master {
+    background-color: white;
+  }
 }

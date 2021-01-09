@@ -15,6 +15,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 0.9375em;
   line-height: 1.5em;
+  background-color: #f6f6fe;
 }
 
 body * + * {
@@ -41,6 +42,135 @@ a:active, a:focus {
 button:focus,
 input:focus {
   outline: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 1rem;
+  width: 85%;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.3em;
+  color: #494c5f;
+}
+
+.payment-option {
+  display: flex;
+  justify-content: space-around;
+}
+.payment-option__label {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #b3b5c6;
+}
+.payment-option__switch {
+  margin-top: 0;
+}
+
+.pricing-component-wrapper {
+  width: 85%;
+  padding: 1rem 2rem;
+}
+
+.pricing-component {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-bottom: 2em;
+  margin-bottom: 3em;
+}
+.pricing-component__type {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+.pricing-component__type.basic, .pricing-component__type.master {
+  color: #6d708d;
+}
+.pricing-component__price-wrapper {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3.5em;
+  width: 100%;
+}
+.pricing-component__price-wrapper.basic, .pricing-component__price-wrapper.master {
+  border-bottom: 1px solid #b3b5c6;
+  color: #494c5f;
+}
+.pricing-component__price-wrapper.professional {
+  border-bottom: 1px solid white;
+}
+.pricing-component__currency {
+  display: inline-block;
+  font-size: 2.2em;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.pricing-component__amount {
+  display: inline-block;
+  margin-top: 0;
+  font-size: 3.5em;
+}
+.pricing-component__feature-wrapper {
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  color: #6d708d;
+  font-weight: 700;
+}
+.pricing-component__feature-wrapper.professional {
+  border-bottom: 1px solid white;
+  color: white;
+}
+.pricing-component__feature-wrapper.basic, .pricing-component__feature-wrapper.master {
+  border-bottom: 1px solid #b3b5c6;
+}
+.pricing-component__btn {
+  width: 90%;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 3em;
+}
+.pricing-component__btn.btn-basic, .pricing-component__btn.btn-master {
+  background: linear-gradient(#a3a8f0, #696fdd);
+  color: white;
+}
+.pricing-component__btn.btn-professional {
+  background: white;
+  color: #696fdd;
+}
+.pricing-component--basic {
+  background-color: white;
+}
+.pricing-component--professional {
+  background: linear-gradient(#a3a8f0, #696fdd);
+  color: white;
+}
+.pricing-component--master {
+  background-color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
