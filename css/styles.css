@@ -55,6 +55,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 3rem 1rem;
   width: 85%;
 }
@@ -207,7 +208,7 @@ input:focus {
   border-bottom: 1px solid #b3b5c6;
 }
 .pricing-component__btn {
-  width: 90%;
+  width: 100%;
   height: 50px;
   border-radius: 8px;
   border: none;
@@ -277,6 +278,93 @@ footer .attribution span + span {
   ##Device = Laptops, Desktops
   ##Screen = B/w 1025px to 1280px
 */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  body {
+    background: url("../images/bg-top.svg") right top/300px 85vh no-repeat fixed, url("../images/bg-bottom.svg") left bottom/250px 200px no-repeat fixed;
+    background-color: #f6f6fe;
+  }
+
+  .pricing-component-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pricing-component {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 25%;
+  }
+  .pricing-component--basic {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .pricing-component--master {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .pricing-component--basic::before {
+    content: "";
+    height: -25px;
+  }
+  .pricing-component--basic::after {
+    content: "";
+    height: -25px;
+  }
+  .pricing-component--professional::before {
+    content: "";
+    height: 25px;
+  }
+  .pricing-component--professional::after {
+    content: "";
+    height: 25px;
+  }
+  .pricing-component--master::before {
+    content: "";
+    height: -25px;
+  }
+  .pricing-component--master::after {
+    content: "";
+    height: -25px;
+  }
+
+  .heading {
+    font-size: 2.8em;
+  }
+
+  .payment-option {
+    padding-left: 5.5em;
+    padding-right: 5.5em;
+    width: 30%;
+  }
+  .payment-option__label {
+    font-size: 1.1em;
+  }
+
+  .pricing-component__type {
+    font-size: 1em;
+  }
+  .pricing-component__currency {
+    font-size: 2.2em;
+  }
+  .pricing-component__amount {
+    font-size: 3.5em;
+  }
+  .pricing-component__feature-item {
+    font-size: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .pricing-component__price-wrapper {
+    padding-bottom: 2.5em;
+  }
+  .pricing-component__btn {
+    margin-top: 2em;
+    height: 40px;
+    font-size: 0.9em;
+  }
+}
 /*
   ##Device = Tablets, Ipads (landscape) and (portrait)
   ##Screen = B/w 768px to 1024px
