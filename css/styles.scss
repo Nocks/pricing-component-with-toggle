@@ -362,8 +362,39 @@ footer {
 
 @media (min-width: 481px) and (max-width: 767px) {
 
-  //CSS
+  body {
+    background: url('../images/bg-top.svg') right -120px top -10px /200px 90vh no-repeat fixed;
+    background-color: $color-very-light-grayish-blue;
+  }
 
+  .heading {
+    font-size: 3em;
+  }
+
+  .payment-option {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+
+    &__label {
+      font-size: 1.2em;
+    }
+  }
+
+  .pricing-component {
+
+    &__type {
+      font-size: 1.4em;
+    }
+    &__currency {
+      font-size: 2.5em;
+    }
+    &__amount {
+      font-size: 4em;
+    }
+    &__feature-item {
+      font-size: 1.1em;
+    }
+  }
 }
 
 /*
