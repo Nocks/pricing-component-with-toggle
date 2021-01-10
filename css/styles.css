@@ -278,13 +278,45 @@ footer .attribution span + span {
   ##Screen = B/w 1025px to 1280px
 */
 /*
-  ##Device = Tablets, Ipads (portrait)
+  ##Device = Tablets, Ipads (landscape) and (portrait)
   ##Screen = B/w 768px to 1024px
 */
-/*
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
+@media (min-width: 768px) and (max-width: 1024px), (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  body {
+    background: url("../images/bg-top.svg") right -100px top/200px 90vh no-repeat fixed;
+    background-color: #f6f6fe;
+  }
+
+  .heading {
+    font-size: 4em;
+  }
+
+  .payment-option {
+    padding-left: 5.5em;
+    padding-right: 5.5em;
+    width: 80%;
+  }
+  .payment-option__label {
+    font-size: 1.8em;
+  }
+
+  .pricing-component-wrapper {
+    width: 80%;
+  }
+
+  .pricing-component__type {
+    font-size: 1.6em;
+  }
+  .pricing-component__currency {
+    font-size: 3em;
+  }
+  .pricing-component__amount {
+    font-size: 5em;
+  }
+  .pricing-component__feature-item {
+    font-size: 1.2em;
+  }
+}
 /*
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px

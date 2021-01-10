@@ -333,26 +333,53 @@ footer {
 
 }
 
+
 /*
-  ##Device = Tablets, Ipads (portrait)
+  ##Device = Tablets, Ipads (landscape) and (portrait)
   ##Screen = B/w 768px to 1024px
 */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px),
+       (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
-  //CSS
+  body {
+    background: url('../images/bg-top.svg') right -100px top /200px 90vh no-repeat fixed;
+    background-color: $color-very-light-grayish-blue;
+  }
 
-}
+  .heading {
+    font-size: 4em;
+  }
 
-/*
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
+  .payment-option {
+    padding-left: 5.5em;
+    padding-right: 5.5em;
+    width: 80%;
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    &__label {
+      font-size: 1.8em;
+    }
+  }
 
-  //CSS
+  .pricing-component-wrapper {
+    width: 80%;
+  }
 
+  .pricing-component {
+
+    &__type {
+      font-size: 1.6em;
+    }
+    &__currency {
+      font-size: 3em;
+    }
+    &__amount {
+      font-size: 5em;
+    }
+    &__feature-item {
+      font-size: 1.2em;
+    }
+  }
 }
 
 /*
