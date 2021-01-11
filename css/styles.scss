@@ -311,7 +311,6 @@ footer {
   }
 }
 
-
 /*
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
@@ -319,8 +318,94 @@ footer {
 
 @media (min-width: 1281px) {
 
-  //CSS
+  body {
+    background: url('../images/bg-top.svg') right top/300px 90vh no-repeat fixed,
+                url('../images/bg-bottom.svg') left bottom/250px 250px no-repeat fixed;
+    background-color: $color-very-light-grayish-blue;
+  }
 
+  .pricing-component-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .pricing-component {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 25%;
+
+    &--basic {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &--master {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    &--basic::before {
+      content: '';
+      height: -25px;
+    }
+    &--basic::after {
+      content: '';
+      height: -25px;
+    }
+    &--professional::before {
+      content: '';
+      height: 25px;
+    }
+    &--professional::after {
+      content: '';
+      height: 25px;
+    }
+    &--master::before {
+      content: '';
+      height: -25px;
+    }
+    &--master::after {
+      content: '';
+      height: -25px;
+    }
+  }
+  .heading {
+    font-size: 3em;
+  }
+
+  .payment-option {
+    padding-left: 5.5em;
+    padding-right: 5.5em;
+    width: 25%;
+
+    &__label {
+      font-size: 1.2em;
+    }
+  }
+  .pricing-component {
+
+    &__type {
+      font-size: 1em;
+    }
+    &__currency {
+      font-size: 2.2em;
+    }
+    &__amount {
+      font-size: 3.5em;
+    }
+    &__feature-item {
+      font-size: 1em;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+    &__price-wrapper {
+      padding-bottom: 2.5em;
+    }
+    &__btn {
+      margin-top: 2em;
+      height: 40px;
+      font-size: 0.9em;
+    }
+  }
 }
 
 /*

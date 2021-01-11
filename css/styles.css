@@ -274,6 +274,93 @@ footer .attribution span + span {
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
 */
+@media (min-width: 1281px) {
+  body {
+    background: url("../images/bg-top.svg") right top/300px 90vh no-repeat fixed, url("../images/bg-bottom.svg") left bottom/250px 250px no-repeat fixed;
+    background-color: #f6f6fe;
+  }
+
+  .pricing-component-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pricing-component {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 25%;
+  }
+  .pricing-component--basic {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .pricing-component--master {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .pricing-component--basic::before {
+    content: "";
+    height: -25px;
+  }
+  .pricing-component--basic::after {
+    content: "";
+    height: -25px;
+  }
+  .pricing-component--professional::before {
+    content: "";
+    height: 25px;
+  }
+  .pricing-component--professional::after {
+    content: "";
+    height: 25px;
+  }
+  .pricing-component--master::before {
+    content: "";
+    height: -25px;
+  }
+  .pricing-component--master::after {
+    content: "";
+    height: -25px;
+  }
+
+  .heading {
+    font-size: 3em;
+  }
+
+  .payment-option {
+    padding-left: 5.5em;
+    padding-right: 5.5em;
+    width: 25%;
+  }
+  .payment-option__label {
+    font-size: 1.2em;
+  }
+
+  .pricing-component__type {
+    font-size: 1em;
+  }
+  .pricing-component__currency {
+    font-size: 2.2em;
+  }
+  .pricing-component__amount {
+    font-size: 3.5em;
+  }
+  .pricing-component__feature-item {
+    font-size: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .pricing-component__price-wrapper {
+    padding-bottom: 2.5em;
+  }
+  .pricing-component__btn {
+    margin-top: 2em;
+    height: 40px;
+    font-size: 0.9em;
+  }
+}
 /*
   ##Device = Laptops, Desktops
   ##Screen = B/w 1025px to 1280px
